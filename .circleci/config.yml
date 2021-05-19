@@ -1,0 +1,53 @@
+version: 2.1
+
+orbs:
+  node: circleci/node@4.1
+
+jobs:
+
+  test:
+    docker:
+      - image: cimg/node:15.1
+
+    steps:
+      - checkout
+
+      - setup_remote_docker:
+          docker_layer_caching: false
+
+      - node/install-packages
+
+      - run:
+          name: Run tests
+          command: npm run test:ci
+
+  build:  
+    docker:
+      - image: cimg/node:15.1
+
+    steps:
+      - checkout
+
+      - setup_remote_docker:
+          docker_layer_caching: false
+
+      - node/install-packages
+
+      - run:
+          name: Run tests
+          command: npm test
+
+      - run:
+          name: Push docker image
+          command: |
+            docker login -u $TF_VAR_docker_login -p $TF_VAR_docker_password
+            TAG=TODO-SET-TAG:$CIRCLE_BUILD_NUM
+            docker build -t $TAG ..
+            docker push $TAG
+workflows:
+  pullRequest: 
+    jobs:
+      - test
+  deploy: 
+    jobs:
+      - build

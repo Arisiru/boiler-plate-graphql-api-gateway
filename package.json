@@ -1,0 +1,81 @@
+{
+  "name": "apollo",
+  "version": "1.0.0",
+  "description": "The GraphQL end point as an API Gateway",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "jest",
+    "test:ci": "jest --ci --coverage --reporters=default --reporters=jest-junit ",
+    "test:coverage": "jest --coverage",
+    "lint": "eslint --fix . --ext .js",
+    "prettier": "prettier --write '**/*.{js,json,graphql}'"
+  },
+  "repository": {
+    "type": "git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@okta/jwt-verifier": "^1.0.0",
+    "apollo-datasource-rest": "^0.9.3",
+    "apollo-server": "^2.16.1",
+    "dotenv": "^8.2.0",
+    "graphql": "^15.3.0",
+    "graphql-tools": "^7.0.5"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "core-js": "^3.6.5",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-import-resolver-typescript": "^2.0.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-json": "^2.1.0",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "husky": "^4.2.5",
+    "jest": "^26.2.2",
+    "jest-junit": "^11.1.0",
+    "lint-staged": "^10.0.8",
+    "prettier": "1.19.1"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.js"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "lines": 42
+      }
+    },
+    "reporters": [
+      "default",
+      "jest-junit"
+    ],
+    "testPathIgnorePatterns": [
+      "/node_modules/"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "git diff HEAD --quiet && npm test"
+    }
+  },
+  "lint-staged": {
+    "*.+(js|json|graphql|md)": [
+      "prettier --write"
+    ]
+  },
+  "prettier": {
+    "printWidth": 90,
+    "bracketSpacing": true,
+    "trailingComma": "es5",
+    "singleQuote": true
+  }
+}

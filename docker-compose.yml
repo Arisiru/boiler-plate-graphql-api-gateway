@@ -1,0 +1,6 @@
+version: '3.5'
+services:
+  apollo:
+    build: .
+    ports:
+      - '8080:8080'
