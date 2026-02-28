@@ -8,8 +8,10 @@ describe('[Mutation.addUser]', () => {
   });
 
   const mockContext = {
+    user: { email: 'test@test.com' },
     dataSources: {
       userAPI: {
+        getUser: jest.fn(),
         addUser: jest.fn(),
       },
     },

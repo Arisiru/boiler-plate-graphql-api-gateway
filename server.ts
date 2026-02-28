@@ -1,6 +1,7 @@
 import 'dotenv/config';
+import { GraphQLError } from 'graphql';
 import config from './src/config';
-import { ApolloServer, AuthenticationError } from '@apollo/server';
+import { ApolloServer } from '@apollo/server';
 import { startStandaloneServer } from '@apollo/server/standalone';
 import { makeExecutableSchema } from '@graphql-tools/schema';
 
@@ -22,10 +23,7 @@ const schema = makeExecutableSchema({
   },
 });
 
-const server = new ApolloServer({
-  schema,
-  debug: false,
-});
+const server = new ApolloServer({ schema });
 
 async function main(): Promise<void> {
   const { url } = await startStandaloneServer(server, {
@@ -38,7 +36,9 @@ async function main(): Promise<void> {
         user = getUser(accessData);
       } catch (eX) {
         console.error(eX);
-        throw new AuthenticationError('You must be logged in');
+        throw new GraphQLError('You must be logged in', {
+          extensions: { code: 'UNAUTHENTICATED' },
+        });
       }
 
       const dataSources = dataSourcesConstructor();

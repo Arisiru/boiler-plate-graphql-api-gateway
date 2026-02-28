@@ -1,25 +1,25 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`[Query.user] should compile schema 1`] = `
-Object {
-  "definitions": Array [
-    Object {
-      "directives": Array [],
-      "fields": Array [
-        Object {
-          "arguments": Array [
-            Object {
+{
+  "definitions": [
+    {
+      "directives": [],
+      "fields": [
+        {
+          "arguments": [
+            {
               "defaultValue": undefined,
               "description": undefined,
-              "directives": Array [],
+              "directives": [],
               "kind": "InputValueDefinition",
-              "name": Object {
+              "name": {
                 "kind": "Name",
                 "value": "email",
               },
-              "type": Object {
+              "type": {
                 "kind": "NamedType",
-                "name": Object {
+                "name": {
                   "kind": "Name",
                   "value": "String",
                 },
@@ -27,17 +27,17 @@ Object {
             },
           ],
           "description": undefined,
-          "directives": Array [],
+          "directives": [],
           "kind": "FieldDefinition",
-          "name": Object {
+          "name": {
             "kind": "Name",
             "value": "user",
           },
-          "type": Object {
+          "type": {
             "kind": "NonNullType",
-            "type": Object {
+            "type": {
               "kind": "NamedType",
-              "name": Object {
+              "name": {
                 "kind": "Name",
                 "value": "User",
               },
@@ -45,16 +45,16 @@ Object {
           },
         },
       ],
-      "interfaces": Array [],
+      "interfaces": [],
       "kind": "ObjectTypeExtension",
-      "name": Object {
+      "name": {
         "kind": "Name",
         "value": "Query",
       },
     },
   ],
   "kind": "Document",
-  "loc": Object {
+  "loc": {
     "end": 58,
     "start": 0,
   },

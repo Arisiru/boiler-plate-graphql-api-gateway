@@ -1,6 +1,6 @@
 {
-  "name": "apollo",
-  "version": "1.0.0",
+  "name": "GraphQL API Wrapper",
+  "version": "0.0.2",
   "description": "The GraphQL end point as an API Gateway",
   "main": "dist/server.js",
   "scripts": {
@@ -14,7 +14,9 @@
     "lint": "eslint .",
     "prettier": "prettier --write '**/*.{ts,js,json,graphql}'"
   },
-  "repository": { "type": "git" },
+  "repository": {
+    "type": "git"
+  },
   "keywords": [],
   "author": "",
   "license": "UNLICENSED",
@@ -30,9 +32,10 @@
   "devDependencies": {
     "@types/jest": "^29.5.0",
     "@types/node": "^20.0.0",
-    "@typescript-eslint/eslint-plugin": "^7.0.0",
-    "@typescript-eslint/parser": "^7.0.0",
+    "@typescript-eslint/eslint-plugin": "^8.0.0",
+    "@typescript-eslint/parser": "^8.0.0",
     "@eslint/js": "^9.0.0",
+    "globals": "^15.0.0",
     "eslint": "^9.0.0",
     "eslint-config-prettier": "^9.0.0",
     "husky": "^4.2.5",
@@ -47,13 +50,33 @@
   "jest": {
     "preset": "ts-jest",
     "testEnvironment": "node",
-    "roots": ["<rootDir>/src"],
-    "testMatch": ["**/*.test.ts"],
-    "collectCoverageFrom": ["src/**/*.ts", "!**/*.test.ts"],
-    "coverageThreshold": { "global": { "lines": 42 } },
-    "reporters": ["default", "jest-junit"],
-    "testPathIgnorePatterns": ["/node_modules/"],
-    "moduleFileExtensions": ["ts", "js", "json"]
+    "roots": [
+      "<rootDir>/src"
+    ],
+    "testMatch": [
+      "**/*.test.ts"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.ts",
+      "!**/*.test.ts"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "lines": 42
+      }
+    },
+    "reporters": [
+      "default",
+      "jest-junit"
+    ],
+    "testPathIgnorePatterns": [
+      "/node_modules/"
+    ],
+    "moduleFileExtensions": [
+      "ts",
+      "js",
+      "json"
+    ]
   },
   "husky": {
     "hooks": {
@@ -62,7 +85,9 @@
     }
   },
   "lint-staged": {
-    "*.+(ts|js|json|graphql|md)": ["prettier --write"]
+    "*.+(ts|js|json|graphql|md)": [
+      "prettier --write"
+    ]
   },
   "prettier": {
     "printWidth": 90,

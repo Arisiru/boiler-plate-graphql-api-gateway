@@ -8,7 +8,9 @@ describe('[Middleware.auth]', () => {
     });
     it('should validate token', async () => {
       const testToken = {};
-      expect(await middleware.verifyAccessToken(testToken as unknown as string)).toEqual(true);
+      expect(await middleware.verifyAccessToken(testToken as unknown as string)).toEqual(
+        true
+      );
     });
   });
 

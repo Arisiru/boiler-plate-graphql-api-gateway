@@ -1,117 +1,117 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`[Type.User] should compile schema 1`] = `
-Object {
-  "definitions": Array [
-    Object {
+{
+  "definitions": [
+    {
       "description": undefined,
-      "directives": Array [],
-      "fields": Array [
-        Object {
-          "arguments": Array [],
+      "directives": [],
+      "fields": [
+        {
+          "arguments": [],
           "description": undefined,
-          "directives": Array [],
+          "directives": [],
           "kind": "FieldDefinition",
-          "name": Object {
+          "name": {
             "kind": "Name",
             "value": "email",
           },
-          "type": Object {
+          "type": {
             "kind": "NonNullType",
-            "type": Object {
+            "type": {
               "kind": "NamedType",
-              "name": Object {
+              "name": {
                 "kind": "Name",
                 "value": "String",
               },
             },
           },
         },
-        Object {
-          "arguments": Array [],
+        {
+          "arguments": [],
           "description": undefined,
-          "directives": Array [],
+          "directives": [],
           "kind": "FieldDefinition",
-          "name": Object {
+          "name": {
             "kind": "Name",
             "value": "firstName",
           },
-          "type": Object {
+          "type": {
             "kind": "NonNullType",
-            "type": Object {
+            "type": {
               "kind": "NamedType",
-              "name": Object {
+              "name": {
                 "kind": "Name",
                 "value": "String",
               },
             },
           },
         },
-        Object {
-          "arguments": Array [],
+        {
+          "arguments": [],
           "description": undefined,
-          "directives": Array [],
+          "directives": [],
           "kind": "FieldDefinition",
-          "name": Object {
+          "name": {
             "kind": "Name",
             "value": "lastName",
           },
-          "type": Object {
+          "type": {
             "kind": "NonNullType",
-            "type": Object {
+            "type": {
               "kind": "NamedType",
-              "name": Object {
+              "name": {
                 "kind": "Name",
                 "value": "String",
               },
             },
           },
         },
-        Object {
-          "arguments": Array [],
+        {
+          "arguments": [],
           "description": undefined,
-          "directives": Array [],
+          "directives": [],
           "kind": "FieldDefinition",
-          "name": Object {
+          "name": {
             "kind": "Name",
             "value": "role",
           },
-          "type": Object {
+          "type": {
             "kind": "NamedType",
-            "name": Object {
+            "name": {
               "kind": "Name",
               "value": "String",
             },
           },
         },
-        Object {
-          "arguments": Array [],
+        {
+          "arguments": [],
           "description": undefined,
-          "directives": Array [],
+          "directives": [],
           "kind": "FieldDefinition",
-          "name": Object {
+          "name": {
             "kind": "Name",
             "value": "photo",
           },
-          "type": Object {
+          "type": {
             "kind": "NamedType",
-            "name": Object {
+            "name": {
               "kind": "Name",
               "value": "String",
             },
           },
         },
       ],
-      "interfaces": Array [],
+      "interfaces": [],
       "kind": "ObjectTypeDefinition",
-      "name": Object {
+      "name": {
         "kind": "Name",
         "value": "User",
       },
     },
   ],
   "kind": "Document",
-  "loc": Object {
+  "loc": {
     "end": 118,
     "start": 0,
   },

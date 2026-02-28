@@ -1,25 +1,25 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`[Query.livecheck] should compile schema 1`] = `
-Object {
-  "definitions": Array [
-    Object {
-      "directives": Array [],
-      "fields": Array [
-        Object {
-          "arguments": Array [],
+{
+  "definitions": [
+    {
+      "directives": [],
+      "fields": [
+        {
+          "arguments": [],
           "description": undefined,
-          "directives": Array [],
+          "directives": [],
           "kind": "FieldDefinition",
-          "name": Object {
+          "name": {
             "kind": "Name",
             "value": "livecheck",
           },
-          "type": Object {
+          "type": {
             "kind": "NonNullType",
-            "type": Object {
+            "type": {
               "kind": "NamedType",
-              "name": Object {
+              "name": {
                 "kind": "Name",
                 "value": "LivecheckResult",
               },
@@ -27,16 +27,16 @@ Object {
           },
         },
       ],
-      "interfaces": Array [],
+      "interfaces": [],
       "kind": "ObjectTypeExtension",
-      "name": Object {
+      "name": {
         "kind": "Name",
         "value": "Query",
       },
     },
   ],
   "kind": "Document",
-  "loc": Object {
+  "loc": {
     "end": 59,
     "start": 0,
   },

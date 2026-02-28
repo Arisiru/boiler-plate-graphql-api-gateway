@@ -1,7 +1,11 @@
 import 'dotenv/config';
-import { RESTDataSource } from '@apollo/datasource-rest';
 import { UserAPI } from './userAPI';
 import { users } from '../../mock/users';
+
+interface MockRESTDataSource {
+  get: jest.Mock;
+  post: jest.Mock;
+}
 
 jest.mock('@apollo/datasource-rest', () => {
   class MockRESTDataSource {
@@ -24,7 +28,9 @@ describe('UserAPI', () => {
       const userAPI = new UserAPI();
       const email = 'joel@test.com';
       await userAPI.getUser(email);
-      expect(userAPI.get).toHaveBeenCalledWith(`/user/${email}`);
+      expect((userAPI as unknown as MockRESTDataSource).get).toHaveBeenCalledWith(
+        `/user/${email}`
+      );
     });
 
     it('should return the data component of the response', async () => {
@@ -36,12 +42,14 @@ describe('UserAPI', () => {
     });
   });
 
-  describe('addUsers', () => {
-    it('should return the data component of the response', async () => {
+  describe('addUser', () => {
+    it('should call POST user API', async () => {
       const userAPI = new UserAPI();
       const email = 'joel@test.com';
       await userAPI.addUser(email);
-      expect(userAPI.post).toHaveBeenCalledWith(`/user/${email}`);
+      expect((userAPI as unknown as MockRESTDataSource).post).toHaveBeenCalledWith(
+        `/user/${email}`
+      );
     });
 
     it('should return the data component of the response', async () => {
