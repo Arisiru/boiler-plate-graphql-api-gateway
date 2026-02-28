@@ -1,0 +1,119 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[Type.User] should compile schema 1`] = `
+{
+  "definitions": [
+    {
+      "description": undefined,
+      "directives": [],
+      "fields": [
+        {
+          "arguments": [],
+          "description": undefined,
+          "directives": [],
+          "kind": "FieldDefinition",
+          "name": {
+            "kind": "Name",
+            "value": "email",
+          },
+          "type": {
+            "kind": "NonNullType",
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "String",
+              },
+            },
+          },
+        },
+        {
+          "arguments": [],
+          "description": undefined,
+          "directives": [],
+          "kind": "FieldDefinition",
+          "name": {
+            "kind": "Name",
+            "value": "firstName",
+          },
+          "type": {
+            "kind": "NonNullType",
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "String",
+              },
+            },
+          },
+        },
+        {
+          "arguments": [],
+          "description": undefined,
+          "directives": [],
+          "kind": "FieldDefinition",
+          "name": {
+            "kind": "Name",
+            "value": "lastName",
+          },
+          "type": {
+            "kind": "NonNullType",
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "String",
+              },
+            },
+          },
+        },
+        {
+          "arguments": [],
+          "description": undefined,
+          "directives": [],
+          "kind": "FieldDefinition",
+          "name": {
+            "kind": "Name",
+            "value": "role",
+          },
+          "type": {
+            "kind": "NamedType",
+            "name": {
+              "kind": "Name",
+              "value": "String",
+            },
+          },
+        },
+        {
+          "arguments": [],
+          "description": undefined,
+          "directives": [],
+          "kind": "FieldDefinition",
+          "name": {
+            "kind": "Name",
+            "value": "photo",
+          },
+          "type": {
+            "kind": "NamedType",
+            "name": {
+              "kind": "Name",
+              "value": "String",
+            },
+          },
+        },
+      ],
+      "interfaces": [],
+      "kind": "ObjectTypeDefinition",
+      "name": {
+        "kind": "Name",
+        "value": "User",
+      },
+    },
+  ],
+  "kind": "Document",
+  "loc": {
+    "end": 118,
+    "start": 0,
+  },
+}
+`;

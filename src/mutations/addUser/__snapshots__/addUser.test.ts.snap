@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[Mutation.addUser] should compile schema 1`] = `
+{
+  "definitions": [
+    {
+      "directives": [],
+      "fields": [
+        {
+          "arguments": [
+            {
+              "defaultValue": undefined,
+              "description": undefined,
+              "directives": [],
+              "kind": "InputValueDefinition",
+              "name": {
+                "kind": "Name",
+                "value": "email",
+              },
+              "type": {
+                "kind": "NonNullType",
+                "type": {
+                  "kind": "NamedType",
+                  "name": {
+                    "kind": "Name",
+                    "value": "String",
+                  },
+                },
+              },
+            },
+          ],
+          "description": undefined,
+          "directives": [],
+          "kind": "FieldDefinition",
+          "name": {
+            "kind": "Name",
+            "value": "addUser",
+          },
+          "type": {
+            "kind": "NamedType",
+            "name": {
+              "kind": "Name",
+              "value": "User",
+            },
+          },
+        },
+      ],
+      "interfaces": [],
+      "kind": "ObjectTypeExtension",
+      "name": {
+        "kind": "Name",
+        "value": "Mutation",
+      },
+    },
+  ],
+  "kind": "Document",
+  "loc": {
+    "end": 64,
+    "start": 0,
+  },
+}
+`;
